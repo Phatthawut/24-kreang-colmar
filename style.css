@@ -1,3 +1,48 @@
-h1 {
-    color: darkred;
+*,
+*::before,
+*::after {
+  /* The width and height you specify include the padding and border. */
+  /* The content area shrinks to fit within the specified dimensions, ensuring a more predictable layout. */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+    --txtbase: #555;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    color: var(--txtbase);
+}
+
+h2 {
+    margin: auto;
+}
+
+video {
+    width: 60%;
+}
+
+.thesis {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.footer {
+    max-width: 1440px;
+    margin: auto;
+    .footer-wrap{
+        display: flex;
+        justify-content: space-between;
+        padding: 16px;
+    a   {text-decoration: none;
+    } 
+    @media (max-width: 768px) {
+        a{
+            display: none;
+        }
+    }
+    }
 }

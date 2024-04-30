@@ -62,8 +62,10 @@ body {
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 4em;
+    font-weight: 600;
     line-height: 1;
+    padding: 20px;
     margin-bottom: 10px;
     text-align: center;
   }
@@ -177,12 +179,12 @@ section {
             color: var(--txtbase);
         }
         @media (max-width: 480px){
-            align-items: center;
             flex-direction: column;
         }
     .course-detail {
         flex: 1;
-        
+        align-content: center;
+        text-align: center;
         background-color: var(--bgbase);
         flex-basis: 80px;
         }
@@ -191,9 +193,11 @@ section {
 }
 
 .thesis {
+    h1{
+
+    }
     .thesis-content{
         display: flex;
-        justify-content: space-between;
         gap: 20px;
         .vdo{
             width: 100%;
@@ -204,11 +208,9 @@ section {
         }
         .thesis-right{
             display: flex;
-            flex-direction: column;
-
+            flex-wrap: wrap;
             .thesis-sub {
                 display: flex;
-                flex-direction: row;
                 flex: 1;
             }
         }

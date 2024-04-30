@@ -83,7 +83,7 @@ li a {
 }
 */
 section {
-    
+    max-width: 1440px;
     margin: auto;
 }
 

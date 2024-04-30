@@ -16,7 +16,45 @@
 
 header {
     display: flex;
-}
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: auto;
+    .logo-holder {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        color: var(--txtbase);
+        text-decoration: none;
+        .logo {
+            display: flex;
+            height: 60px;
+            @media (max-width: 480px) {
+                height: 42px;
+            }
+        }
+        .logo-text {
+            flex: 1;
+        }
+    }
+    nav {
+        display: flex;
+        
+        align-items: center;
+        ul {
+          display: flex;
+          gap: 5px;
+          list-style-type: none;
+          li {
+            a {
+              display: inline-block;
+              padding: 10px 20px;
+              color: var(--txtbase);
+              }
+            }
+          }
+        }
+    }
+
 
 body {
     font-family: "Open Sans", sans-serif;
@@ -29,13 +67,13 @@ h1 {
     margin-bottom: 10px;
     text-align: center;
   }
-
+/*
 h2 {
     font-size: 2em;
     text-align: center;
   }
 
-P {
+p {
     font-size: 1em;
     text-align: center;
 }
@@ -43,99 +81,92 @@ P {
 li a {
     text-decoration: none;
 }
-
-
-nav {
-    display: flex;
-    align-items: center;
-    ul {
-      display: flex;
-      list-style-type: none;
-      li {
-        a {
-          display: inline-block;
-          padding: 10px 20px;
-          color: var(--txtbase);
-
-          }
-        }
-      }
-    }
-
-
+*/
+section {
     
+    margin: auto;
+}
+
+   
 .hero{
     display: flex;
-    max-width: 1440px;
-    @media (max-width: 1024px) {
-        flex-direction: column;
-    
-    @media (max-width: 480px) {
-        align-items: center;
+    flex-wrap: wrap;
+    @media (max-width: 480px){
         flex-direction: column;
     }
+
     .hero-left {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex: 1;
+        flex: 1 1 50%;
         
-        }
         .banner {
-            width: 60%;
+            flex: 1;
+            padding: 50px;
+            background-color: var(--bgbase);
+            img {
+                width: 60%;
+            }
+            
             @media (max-width: 480px){
-                width: 100%;
+                padding: 0px;
+                width: 100%;  
+            }
         }
-    
     }
     .hero-right {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        flex: 1;
+        flex: 1 1 50%;
         background-color: var(--bgbase);
+        @media (max-width: 480px){
+            padding: 15px;
+        }
 
         .call-to-action {
-            
-
+            background-color: var(--txtbase);
+            color: var(--btntext);
+            height: 50px;
+            width: 40%;
+            border: none;
+            margin: 24px auto 32px auto;
             @media (max-width: 480px){
             height: 50px;
             width: 40%;
-            background-color: var(--txtbase);
-            color: var(--btntext);
-            border: none;
-            margin: 24px auto 32px auto;
+            
         }
     }
     }
 }
-}
+
 .information {
     display: flex;
-    
+    overflow: hidden;}
     .informaiton-main{
         display: flex;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
-        
         @media (max-width: 480px) {
             display: none;
+        }
+        img {
+            width: 80%;
+            
         }
     }
     .information-right {
         display: flex;
         flex-direction: column;
-        img {width: 100%;}
-        flex: 1;
         padding-bottom: 24px;
     }
     .sub-information {
         padding-bottom: 32px;
     }
-}
+
 
 .course{
-    max-width: 1440px;
     .course-container{
         display: flex;
         justify-content: space-around;
@@ -146,13 +177,12 @@ nav {
             color: var(--txtbase);
         }
         @media (max-width: 480px){
-            
             align-items: center;
             flex-direction: column;
-    }
+        }
     .course-detail {
         flex: 1;
-        width: 100%;
+        
         background-color: var(--bgbase);
         flex-basis: 80px;
         }
@@ -175,6 +205,12 @@ nav {
         .thesis-right{
             display: flex;
             flex-direction: column;
+
+            .thesis-sub {
+                display: flex;
+                flex-direction: row;
+                flex: 1;
+            }
         }
     }
 } 
@@ -190,11 +226,18 @@ nav {
     }
     }
 
-    .mobile-hidden{
+.mobile-hidden {
         @media (max-width: 480px) {
             a{
                 display: none;
             }
             display: none;
     }
+}
+.pc-hidden {
+    @media (min-width: 480px) {
+        display: none;    
     }
+    
+}
+

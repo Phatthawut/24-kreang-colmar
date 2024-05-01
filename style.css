@@ -27,7 +27,8 @@ header {
         text-decoration: none;
         .logo {
             display: flex;
-            height: 60px;
+            height: 64px;
+            margin-left: 24px;
             @media (max-width: 480px) {
                 height: 42px;
             }
@@ -38,17 +39,17 @@ header {
     }
     nav {
         display: flex;
-        
+        margin-right: 24px;
         align-items: center;
         ul {
           display: flex;
-          gap: 5px;
+          gap: 16px;
           list-style-type: none;
           li {
             a {
               display: inline-block;
-              padding: 10px 20px;
               color: var(--txtbase);
+              text-decoration: none;
               }
             }
           }
@@ -57,7 +58,7 @@ header {
 
 
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Poppins", "Open Sans", sans-serif;
     color: var(--txtbase);
 }
 
@@ -65,9 +66,6 @@ h1 {
     font-size: 4em;
     font-weight: 600;
     line-height: 1;
-    padding: 20px;
-    margin-bottom: 10px;
-    text-align: center;
   }
 /*
 h2 {
@@ -86,65 +84,50 @@ li a {
 */
 section {
     max-width: 1440px;
-    margin: auto;
+    margin: 0 auto;
 }
 
-   
+
 .hero{
+    max-width: 1440px;
     display: flex;
-    flex-wrap: wrap;
-    @media (max-width: 480px){
+    justify-content: center;
+    background-color: var(--bgbase);
+    @media (max-width: 480px) {
         flex-direction: column;
     }
-
-    .hero-left {
-        display: flex;
-        flex: 1 1 50%;
-        
-        .banner {
-            flex: 1;
-            padding: 50px;
-            background-color: var(--bgbase);
-            img {
-                width: 60%;
-            }
-            
-            @media (max-width: 480px){
-                padding: 0px;
-                width: 100%;  
-            }
-        }
+    .hero-left{
+        width: 60%;
+        padding: 32px 24px;
+        flex: 1;
+    }
+    img {
+        width: 100%;
+        height: 100%;
     }
     .hero-right {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        flex: 1 1 50%;
-        background-color: var(--bgbase);
-        @media (max-width: 480px){
-            padding: 15px;
+        margin-left: 24px;
+        flex: 1;
+        h1 {
+            text-align: left;
+            padding-bottom: 24px;
         }
-
         .call-to-action {
-            background-color: var(--txtbase);
-            color: var(--btntext);
-            height: 50px;
+            margin: 0 auto;
+            margin-top: 20px;
             width: 40%;
-            border: none;
-            margin: 24px auto 32px auto;
-            @media (max-width: 480px){
-            height: 50px;
-            width: 40%;
-            
+            padding: 10px;
         }
-    }
     }
 }
 
+/* information old
 .information {
     display: flex;
-    overflow: hidden;}
+    overflow: hidden;
     .informaiton-main{
         display: flex;
         align-items: center;
@@ -166,11 +149,35 @@ section {
     .sub-information {
         padding-bottom: 32px;
     }
+}
+*/
 
+.information {
+    display: flex;
+    max-width: 1440px;
+    .information-main {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    img {
+        width: 100%;
+    }
+    .information-right {
+        display: flex;
+        flex-basis: 50%;
+        flex-direction: column;
+        flex: 1;
+    }
+    
+}
 
-.course{
+.course-container{
+    display: flex;
+    max-width: 1440px;
     .course-container{
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
         gap: 8px;
         padding-bottom: 8px;
